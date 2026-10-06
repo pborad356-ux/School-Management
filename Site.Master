@@ -1,0 +1,86 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SchoolManagement.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - School Management System</title>
+    
+    <!-- Google Fonts & FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="layout-wrapper">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-brand">
+                         <i class="fa-solid fa-graduation-cap"></i> School<span>Man</span>
+                </div>
+                <ul class="sidebar-menu">
+                    <li>
+                        <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Default.aspx" CssClass="sidebar-link">
+                            <i class="fa-solid fa-chart-pie"></i> Dashboard
+                        </asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="lnkStudents" runat="server" NavigateUrl="~/Students.aspx" CssClass="sidebar-link">
+                            <i class="fa-solid fa-user-graduate"></i> Students
+                        </asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="lnkTeachers" runat="server" NavigateUrl="~/Teachers.aspx" CssClass="sidebar-link">
+                            <i class="fa-solid fa-chalkboard-teacher"></i> Teachers
+                        </asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="lnkClasses" runat="server" NavigateUrl="~/Classes.aspx" CssClass="sidebar-link">
+                            <i class="fa-solid fa-school"></i> Classes
+                        </asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="lnkAttendance" runat="server" NavigateUrl="~/Attendance.aspx" CssClass="sidebar-link">
+                            <i class="fa-solid fa-calendar-check"></i> Attendance
+                        </asp:HyperLink>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <div class="user-info">
+                        <span class="user-name">
+                            <i class="fa-solid fa-user-circle"></i> 
+                            <asp:Label ID="lblUserFullName" runat="server" Text="Administrator"></asp:Label>
+                        </span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                    <asp:Button ID="btnLogout" runat="server" Text="Log Out" CssClass="logout-btn" OnClick="btnLogout_Click" UseSubmitBehavior="false" CausesValidation="false" />
+                </div>
+            </aside>
+
+            <!-- Main Content Container -->
+            <main class="main-container">
+                <!-- Top Header -->
+                <header class="header">
+                    <div class="header-title">
+                        <%: Page.Title %>
+                    </div>
+                    <div class="header-date">
+                        <i class="fa-regular fa-calendar-days"></i> 
+                        <asp:Label ID="lblCurrentDate" runat="server"></asp:Label>
+                    </div>
+                </header>
+
+                <!-- Page Content Area -->
+                <section class="content-body">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
+            </main>
+        </div>
+    </form>
+</body>
+</html>

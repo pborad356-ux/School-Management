@@ -1,0 +1,10 @@
+# Visual Studio files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+Database1_log.ldf
+Database1.mdf
