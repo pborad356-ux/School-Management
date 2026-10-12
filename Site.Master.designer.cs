@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchoolManagement {
-    
-    
-    public partial class Site {
-        
+namespace SchoolManagement
+{
+
+
+    public partial class Site
+    {
+
         /// <summary>
         /// head control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lnkDashboard control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkDashboard;
-        
+
         /// <summary>
         /// lnkStudents control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkStudents;
-        
+
         /// <summary>
         /// lnkTeachers control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkTeachers;
-        
+
         /// <summary>
         /// lnkClasses control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkClasses;
-        
+
         /// <summary>
         /// lnkAttendance control.
         /// </summary>
@@ -74,7 +76,52 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkAttendance;
-        
+
+        /// <summary>
+        /// lnkFees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkFees;
+
+        /// <summary>
+        /// lnkResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkResults;
+
+        /// <summary>
+        /// lnkTimetable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkTimetable;
+
+        /// <summary>
+        /// lnkNotices control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkNotices;
+
+        /// <summary>
+        /// lnkTransport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkTransport;
+
         /// <summary>
         /// lblUserFullName control.
         /// </summary>
@@ -83,7 +130,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUserFullName;
-        
+
         /// <summary>
         /// btnLogout control.
         /// </summary>
@@ -92,7 +139,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogout;
-        
+
         /// <summary>
         /// lblCurrentDate control.
         /// </summary>
@@ -101,7 +148,7 @@ namespace SchoolManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCurrentDate;
-        
+
         /// <summary>
         /// MainContent control.
         /// </summary>

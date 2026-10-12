@@ -80,9 +80,9 @@ namespace SchoolManagement
         {
             getcon();
 
-            string query = "SELECT * FROM stu_tbl";
+            //string query = "SELECT * FROM stu_tbl";
 
-            SqlDataAdapter da = new SqlDataAdapter(query, con);
+             da = new SqlDataAdapter("SELECT * FROM stu_tbl", con);
 
             DataSet ds = new DataSet();
 
@@ -103,13 +103,12 @@ namespace SchoolManagement
             ddlRole.Text = "";
 
         }
-        void filldata() // paring
+        void filldata() 
         {
             getcon();
             da = new SqlDataAdapter("select * from stu_tbl where id = '" + ViewState["Id"] + "' ", con);
             ds = new DataSet();
             da.Fill(ds);
-            //paring 
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -122,7 +121,7 @@ namespace SchoolManagement
             }
 
         }
-
+        
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

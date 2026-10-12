@@ -13,9 +13,7 @@ using System.Web.UI.WebControls;
 
 namespace SchoolManagement
 {
-  
-
-    public partial class Login : System.Web.UI.Page
+      public partial class Login : System.Web.UI.Page
     {
         SqlConnection con;
         SqlDataAdapter da;
@@ -38,20 +36,23 @@ namespace SchoolManagement
 
                 con.Open();
 
-                cmd = new SqlCommand("select count(*) from stu_tbl where Username='"+ txtUsername.Text+ "' and Password='"+ txtPassword.Text + "'",con);
+                cmd = new SqlCommand("select count(*) from stu_tbl where Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'", con);
 
                 i = Convert.ToInt16(cmd.ExecuteScalar());
 
 
                 if (i > 0)
                 {
+                    Session["admin"] = txtUsername.Text;
                     Response.Redirect("Default.aspx");
+
                 }
                 else
                 {
                     Response.Write("Invalid username and password");
                 }
             }
+
         }
 
         protected void txtPassword_TextChanged(object sender, EventArgs e)

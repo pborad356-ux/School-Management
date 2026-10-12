@@ -56,8 +56,14 @@
       <DependentUpon>Register.mdf</DependentUpon>
     </Content>
     <Content Include="css\style.css" />
+    <Content Include="Fees.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Notices.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Results.aspx" />
+    <Content Include="TeacherDashboard.aspx" />
+    <Content Include="Timetable.aspx" />
+    <Content Include="Transport.aspx" />
     <Content Include="Web.config" />
     <Content Include="Site.Master" />
     <Content Include="Default.aspx" />
@@ -68,8 +74,22 @@
     <Content Include="Attendance.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fees.aspx.cs">
+      <DependentUpon>Fees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fees.aspx.designer.cs">
+      <DependentUpon>Fees.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Notices.aspx.cs">
+      <DependentUpon>Notices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notices.aspx.designer.cs">
+      <DependentUpon>Notices.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -77,6 +97,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Results.aspx.cs">
+      <DependentUpon>Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Results.aspx.designer.cs">
+      <DependentUpon>Results.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -106,6 +133,13 @@
     <Compile Include="Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TeacherDashboard.aspx.cs">
+      <DependentUpon>TeacherDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherDashboard.aspx.designer.cs">
+      <DependentUpon>TeacherDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teachers.aspx.cs">
       <DependentUpon>Teachers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +160,20 @@
     </Compile>
     <Compile Include="Attendance.aspx.designer.cs">
       <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Timetable.aspx.cs">
+      <DependentUpon>Timetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Timetable.aspx.designer.cs">
+      <DependentUpon>Timetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transport.aspx.cs">
+      <DependentUpon>Transport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transport.aspx.designer.cs">
+      <DependentUpon>Transport.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

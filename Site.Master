@@ -12,6 +12,7 @@
     <link href="~/css/style.css" rel="stylesheet" type="text/css" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -48,6 +49,47 @@
                             <i class="fa-solid fa-calendar-check"></i> Attendance
                         </asp:HyperLink>
                     </li>
+                   
+<!-- Fees -->
+<li>
+    <asp:HyperLink ID="lnkFees" runat="server"
+        NavigateUrl="~/Fees.aspx" CssClass="sidebar-link">
+        <i class="fa-solid fa-wallet"></i> Fees
+    </asp:HyperLink>
+</li>
+
+<!-- Results -->
+<li>
+    <asp:HyperLink ID="lnkResults" runat="server"
+        NavigateUrl="~/Results.aspx" CssClass="sidebar-link">
+        <i class="fa-solid fa-chart-column"></i> Results
+    </asp:HyperLink>
+</li>
+
+<!-- Timetable -->
+<li>
+    <asp:HyperLink ID="lnkTimetable" runat="server"
+        NavigateUrl="~/Timetable.aspx" CssClass="sidebar-link">
+        <i class="fa-solid fa-calendar-days"></i> Timetable
+    </asp:HyperLink>
+</li>
+                    
+<!-- Notices -->
+<li>
+    <asp:HyperLink ID="lnkNotices" runat="server"
+        NavigateUrl="~/Notices.aspx" CssClass="sidebar-link">
+        <i class="fa-solid fa-bullhorn"></i> Notices
+    </asp:HyperLink>
+</li>
+
+<!-- Transport -->
+<li>
+    <asp:HyperLink ID="lnkTransport" runat="server"
+        NavigateUrl="~/Transport.aspx" CssClass="sidebar-link">
+        <i class="fa-solid fa-bus"></i> Transport
+    </asp:HyperLink>
+</li>
+
                 </ul>
                 <div class="sidebar-footer">
                     <div class="user-info">

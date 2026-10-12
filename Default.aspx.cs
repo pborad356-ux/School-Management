@@ -26,7 +26,9 @@ namespace SchoolManagement
             {
                 //getcon();
                 //fillgrid();
-                da=new SqlDataAdapter("select * from stu_tbl where Username='" + Session["admin"] +"'",con);
+                con = new SqlConnection(s);
+
+                da =new SqlDataAdapter("select * from stu_tbl where Username='" + Session["admin"] +"'",con);
                 ds=new DataSet();
                 da.Fill(ds);
                 nm = ds.Tables[0].Rows[0]["Full Name"].ToString();
@@ -40,7 +42,11 @@ namespace SchoolManagement
         private void LoadStatistics()
         {
           
-                }
-            }
+                
         }
+            
+    }
+        
+}
+
     
