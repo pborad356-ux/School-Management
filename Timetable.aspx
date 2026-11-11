@@ -572,25 +572,26 @@
 
             </div>
 
-            <div class="tt-actions">
+           <div class="tt-actions">
 
-                <asp:Button ID="btnSave" runat="server"
-                    Text="Save Timetable"
-                    CssClass="tt-btn tt-btn-primary"
-                    OnClick="btnSave_Click" />
+    <asp:Button ID="btnSave" runat="server"
+        Text="Save Timetable"
+        CssClass="tt-btn tt-btn-primary"
+        OnClick="btnSave_Click" />
 
-                <asp:Button ID="btnUpdate" runat="server"
-                    Text="Update Timetable"
-                    CssClass="tt-btn tt-btn-green"
-                    OnClick="btnUpdate_Click" />
+    <asp:Button ID="btnUpdate" runat="server"
+        Text="Update Timetable"
+        CssClass="tt-btn tt-btn-green"
+        OnClick="btnUpdate_Click"
+        Visible="false" />
 
-                <asp:Button ID="btnClear" runat="server"
-                    Text="Clear Form"
-                    CssClass="tt-btn tt-btn-light"
-                    CausesValidation="false"
-                    OnClick="btnClear_Click" />
+    <asp:Button ID="btnClear" runat="server"
+        Text="Clear Form"
+        CssClass="tt-btn tt-btn-light"
+        CausesValidation="false"
+        OnClick="btnClear_Click" />
 
-            </div>
+</div>
 
             <asp:Label ID="lblMessage" runat="server"
                 CssClass="tt-message" />

@@ -159,8 +159,8 @@ namespace SchoolManagement
 
         protected void gvStudents_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            gvStudents.PageIndex = e.NewPageIndex;
-            LoadStudents();
+            //gvStudents.PageIndex = e.NewPageIndex;
+            //LoadStudents();
         }
 
         protected void txtSearch_TextChanged(object sender, EventArgs e)

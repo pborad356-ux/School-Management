@@ -1,4 +1,4 @@
-﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notices.aspx.cs" Inherits="SchoolManagement.Notices" %>--%>
+﻿
 <%@ Page Title="Notice Management" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Notices.aspx.cs" Inherits="SchoolManagement.Notices" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -103,8 +103,14 @@
     </div>
 
     <div class="notice-card">
-        <h2><i class="fa-solid fa-pen-to-square"></i> Add Notice</h2>
+
+        <h2><i class="fa-solid fa-pen-to-square"></i>
+            <asp:Label ID="lblFormTitle" runat="server" Text="Add Notice" />
+        </h2>
+
         <p class="notice-sub">Enter the announcement details below.</p>
+
+        <asp:HiddenField ID="hfNoticeId" runat="server" />
 
         <div class="notice-form">
             <div class="notice-field">
@@ -167,8 +173,10 @@
         <div class="notice-actions">
             <asp:Button ID="btnSave" runat="server" Text="Save Notice"
                 CssClass="notice-btn" OnClick="btnSave_Click" />
+
             <asp:Button ID="btnUpdate" runat="server" Text="Update Notice"
                 CssClass="notice-btn update" OnClick="btnUpdate_Click" />
+
             <asp:Button ID="btnClear" runat="server" Text="Clear"
                 CssClass="notice-btn clear" OnClick="btnClear_Click"
                 CausesValidation="false" />
@@ -184,6 +192,7 @@
         <div class="notice-search">
             <asp:TextBox ID="txtSearch" runat="server" CssClass="notice-input"
                 placeholder="Search by title or category..." />
+
             <asp:Button ID="btnSearch" runat="server" Text="Search"
                 CssClass="notice-btn" OnClick="btnSearch_Click"
                 CausesValidation="false" />
@@ -195,16 +204,33 @@
                 GridLines="None" DataKeyNames="NoticeId"
                 EmptyDataText="No notice records found."
                 OnRowCommand="gvNotices_RowCommand">
+
                 <Columns>
                     <asp:BoundField DataField="NoticeId" HeaderText="ID" />
                     <asp:BoundField DataField="NoticeTitle" HeaderText="Title" />
                     <asp:BoundField DataField="Category" HeaderText="Category" />
+
                     <asp:BoundField DataField="PublishDate" HeaderText="Publish Date"
                         DataFormatString="{0:dd-MM-yyyy}" />
+
                     <asp:BoundField DataField="Audience" HeaderText="Audience" />
                     <asp:BoundField DataField="Status" HeaderText="Status" />
-                    <asp:ButtonField Text="Edit" CommandName="EditNotice"
-                        ButtonType="Button" />
+
+                    <asp:TemplateField HeaderText="Action">
+                        <ItemTemplate>
+
+                            <asp:Button ID="btnEdit" runat="server" Text="Edit"
+                                CommandName="EditNotice"
+                                CommandArgument='<%# Eval("NoticeId") %>' />
+
+                            <asp:Button ID="btnDelete" runat="server" Text="Delete"
+                                CommandName="DeleteNotice"
+                                CommandArgument='<%# Eval("NoticeId") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this notice?');" />
+
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                 </Columns>
             </asp:GridView>
         </div>

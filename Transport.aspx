@@ -184,10 +184,14 @@
         <div class="transport-actions">
             <asp:Button ID="btnSave" runat="server" Text="Save Transport"
                 CssClass="transport-btn" OnClick="btnSave_Click" />
-            <asp:Button ID="btnUpdate" runat="server" Text="Update Transport"
-                CssClass="transport-btn update" OnClick="btnUpdate_Click" />
+          <asp:Button ID="btnUpdate" runat="server"
+    Text="Update Transport"
+    CssClass="transport-btn update"
+    OnClick="btnUpdate_Click"
+    Visible="false" />
             <asp:Button ID="btnClear" runat="server" Text="Clear"
                 CssClass="transport-btn clear" OnClick="btnClear_Click"
+
                 CausesValidation="false" />
         </div>
 

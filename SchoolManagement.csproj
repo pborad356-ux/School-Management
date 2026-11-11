@@ -61,7 +61,6 @@
     <Content Include="Notices.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Results.aspx" />
-    <Content Include="TeacherDashboard.aspx" />
     <Content Include="Timetable.aspx" />
     <Content Include="Transport.aspx" />
     <Content Include="Web.config" />
@@ -132,13 +131,6 @@
     </Compile>
     <Compile Include="Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherDashboard.aspx.cs">
-      <DependentUpon>TeacherDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TeacherDashboard.aspx.designer.cs">
-      <DependentUpon>TeacherDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teachers.aspx.cs">
       <DependentUpon>Teachers.aspx</DependentUpon>

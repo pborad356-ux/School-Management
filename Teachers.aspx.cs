@@ -103,9 +103,10 @@ namespace SchoolManagement
         {
             getcon();
 
-            da = new SqlDataAdapter("select * from Teachers where T_Id = '" +
-                ViewState["T_Id"] + "'", con);
-
+            //da = new SqlDataAdapter("select * from Teachers where T_Id = '" +
+            //    ViewState["T_Id"] + "'", con);
+            da = new SqlDataAdapter("SELECT [T_Id ] AS T_Id, [T_FullName ] AS T_FullName, [T_Email ] AS T_Email, [T_Mobile ] AS T_Mobile, [T_Specialization ] AS T_Specialization FROM Teachers WHERE [T_Id ] = '" +
+            ViewState["T_Id"] + "'", con);
             ds = new DataSet();
             da.Fill(ds);
 
@@ -163,8 +164,8 @@ namespace SchoolManagement
 
         protected void gvTeachers_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            gvTeachers.PageIndex = e.NewPageIndex;
-            fillgrid();
+            //gvTeachers.PageIndex = e.NewPageIndex;
+            //fillgrid();
         }
 
         protected void txtSearch_TextChanged(object sender, EventArgs e)

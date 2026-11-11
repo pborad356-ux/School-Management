@@ -78,7 +78,7 @@
 <li>
     <asp:HyperLink ID="lnkNotices" runat="server"
         NavigateUrl="~/Notices.aspx" CssClass="sidebar-link">
-        <i class="fa-solid fa-bullhorn"></i> Notices
+        <i class="fa-solid fa-bullhorn"></i>Announcement
     </asp:HyperLink>
 </li>
 
